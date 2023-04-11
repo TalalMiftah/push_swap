@@ -26,31 +26,6 @@ void	fake_swap(t_elem *push_swap)
 	}
 }
 
-void	to_b(int i, t_elem *push_swap)
-{
-	int	j;
-
-	j = ft_lstsize(push_swap->a) - i + 1;
-	if (i <= ft_lstsize(push_swap->a) / 2)
-	{
-		while (i != 1)
-		{
-			ra(push_swap, 1);
-			i--;
-		}
-		pb(push_swap, 1);
-	}
-	if (i > ft_lstsize(push_swap->a) / 2)
-	{
-		while (j != 0)
-		{
-			rra(push_swap, 1);
-			j--;
-		}
-		pb(push_swap, 1);
-	}
-}
-
 // void	norminette(t_elem *push_swap)
 // {
 // 	while (1)
