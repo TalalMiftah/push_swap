@@ -34,13 +34,18 @@ void	what_to_push(t_elem *push_swap)
 void	push_to_b(t_elem *push_swap)
 {
 	int		i;
-	// int		j;
 	t_list	*h;
 	
-	i = 0;
+	i = ft_lstsize(push_swap->a);
 	h = push_swap->a;
-	while (h != push_swap->a->next->previous)
-	
+	while (i)
+	{
+		if (push_swap->a->index == 1)
+			pb(push_swap, 1);
+		else
+			ra(push_swap, 1);
+		i--;
+	}
 }
 
 void	from_b_to_a(t_elem *push_swap)
