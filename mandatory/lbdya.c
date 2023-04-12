@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:07:47 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 02:53:45 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 23:14:20 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	what_to_push(t_elem *push_swap)
 		l->index = 1;
 		l = l->next;
 		if (l == push_swap->a)
-			break;
+			break ;
 	}
 	h->index = 0;
 	while (1)
@@ -42,30 +42,14 @@ void	what_to_push(t_elem *push_swap)
 
 void	push_to_b(t_elem *push_swap)
 {
-<<<<<<< HEAD
-
-	// i = ft_lstsize(push_swap->a);
 	while (ft_lstsize(push_swap->a) > push_swap->l)
 	{
-		if (fake_swap(push_swap) == 1)
+		if (fake_swap(push_swap))
 			continue ;
-=======
-	int		i;
-	t_list	*h;
-	
-	i = ft_lstsize(push_swap->a);
-	h = push_swap->a;
-	while (i)
-	{
->>>>>>> 7a7dd01c0fa0dd889887bffcc5be3592abd08eb0
-		if (push_swap->a->index == 1)
+		else if (push_swap->a->index == 1)
 			pb(push_swap, 1);
 		else
 			ra(push_swap, 1);
-<<<<<<< HEAD
-=======
-		i--;
->>>>>>> 7a7dd01c0fa0dd889887bffcc5be3592abd08eb0
 	}
 }
 
@@ -91,6 +75,7 @@ void	from_b_to_a(t_elem *push_swap)
 
 void	longest(t_elem *push_swap)
 {
+	push_swap->l = 0;
 	push_swap->h = push_swap->a;
 	while (1)
 	{
@@ -98,7 +83,7 @@ void	longest(t_elem *push_swap)
 		push_swap->head = push_swap->h;
 		push_swap->head0 = push_swap->head->next;
 		norminette(push_swap);
-		if (push_swap->i >= push_swap->l)
+		if (push_swap->i > push_swap->l)
 		{
 			push_swap->l = push_swap->i;
 			push_swap->longest = push_swap->h;
@@ -113,25 +98,25 @@ void	longest(t_elem *push_swap)
 
 void	find_l(t_elem *push_swap)
 {
-	// int	i;
+	int	i;
 	int	j;
 
 	j = ft_lstsize(push_swap->a) / 2;
 	longest(push_swap);
 	push_to_b(push_swap);
-	// if (push_swap->b)
-	// 	from_b_to_a(push_swap);
-	// i = find_min(push_swap);
-	// if (i > j)
-	// 	i = i - ft_lstsize(push_swap->a);
-	// while (i > 0)
-	// {
-	// 	ra(push_swap, 1);
-	// 	i--;
-	// }
-	// while (i < 0)
-	// {
-	// 	rra(push_swap, 1);
-	// 	i++;
-	// }
+	if (push_swap->b)
+		from_b_to_a(push_swap);
+	i = find_min(push_swap);
+	if (i > j)
+		i = i - ft_lstsize(push_swap->a);
+	while (i > 0)
+	{
+		ra(push_swap, 1);
+		i--;
+	}
+	while (i < 0)
+	{
+		rra(push_swap, 1);
+		i++;
+	}
 }

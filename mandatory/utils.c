@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 22:37:08 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 02:58:06 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 23:15:22 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ int	ft_max(int a, int b)
 
 int	fake_swap(t_elem *push_swap)
 {
-	push_swap->plongest = push_swap->l;
+	int	tmp;
+
+	tmp = push_swap->l;
 	sa(push_swap, 0);
 	longest(push_swap);
-	if (push_swap->l > push_swap->plongest)
+	if (push_swap->l > tmp)
 	{
 		ft_printf("sa\n");
 		return (1);
