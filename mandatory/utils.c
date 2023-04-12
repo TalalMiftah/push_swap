@@ -6,89 +6,79 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 22:37:08 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/09 22:09:32 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 02:34:28 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	fake_swap(t_elem *push_swap)
+int	ft_max(int a, int b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+int	fake_swap(t_elem *push_swap)
 {
 	push_swap->plongest = push_swap->l;
 	sa(push_swap, 0);
 	longest(push_swap);
 	if (push_swap->l > push_swap->plongest)
+	{
 		ft_printf("sa\n");
+		return (1);
+	}
 	else
 	{
 		sa(push_swap, 0);
 		longest(push_swap);
 	}
+	return (0);
 }
 
-void	to_b(int i, t_elem *push_swap)
+void	norminette(t_elem *push_swap)
 {
-	int	j;
-
-	j = ft_lstsize(push_swap->a) - i + 1;
-	if (i <= ft_lstsize(push_swap->a) / 2)
+	while (1)
 	{
-		while (i != 1)
+		if (push_swap->head->i < push_swap->head0->i)
 		{
-			ra(push_swap, 1);
-			i--;
+			push_swap->i++;
+			push_swap->head = push_swap->head0;
 		}
-		pb(push_swap, 1);
-	}
-	if (i > ft_lstsize(push_swap->a) / 2)
-	{
-		while (j != 0)
-		{
-			rra(push_swap, 1);
-			j--;
-		}
-		pb(push_swap, 1);
+		push_swap->head0 = push_swap->head0->next;
+		if (push_swap->head0 == push_swap->head)
+			break ;
 	}
 }
-
-// void	norminette(t_elem *push_swap)
-// {
-// 	while (1)
-// 	{
-// 		if (push_swap->head->i < push_swap->head0->i)
-// 		{
-// 			push_swap->i++;
-// 			push_swap->head = push_swap->head0;
-// 		}
-// 		push_swap->head0 = push_swap->head0->next;
-// 		if (push_swap->head0 == push_swap->head)
-// 			break ;
-// 	}
-// }
 
 int	find_min(t_elem *push_swap)
 {
 	int		tmp;
 	int		i;
+	int		j;
 	t_list	*h;
 
 	h = push_swap->a;
 	tmp = 2147483647;
 	i = 0;
-	re_indexing(push_swap->a);
+	j = 0;
 	while (1)
 	{
+		re_indexing(push_swap->a);
 		if (h->i < tmp)
 		{
 			tmp = h->i;
 			push_swap->new_head = h;
-			i = h->index;
+			j = i;
 		}
+		i++;
 		h = h->next;
 		if (h == push_swap->a)
 			break ;
 	}
-	return (i);
+	return (j);
 }
 
 int	find_position(t_list *b, t_elem *push_swap)

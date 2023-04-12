@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:33:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/09 16:49:47 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 00:06:12 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <limits.h>
 # include <stdio.h>
 
 typedef struct s_list
@@ -37,6 +38,7 @@ typedef struct elements
 	t_list	*new_head;
 	int		l;
 	int		i;
+	int		j;
 	int		plongest;
 	int		best_a;
 	int		best_b;
@@ -74,10 +76,10 @@ int		find_position(t_list *b, t_elem *push_swap);
 int		absolute_value(int i);
 void	best_move(t_elem *push_swap);
 void	from_b_to_a(t_elem *push_swap);
-void	to_b(int i, t_elem *push_swap);
-void	fake_swap(t_elem *push_swap);
+int		fake_swap(t_elem *push_swap);
 void	push_to_a(t_elem *push_swap);
 int		find_min(t_elem *push_swap);
+void	what_to_push(t_elem *push_swap);
 
 void	sa(t_elem *push_swap, int key);
 void	sb(t_elem *push_swap, int key);
@@ -90,5 +92,6 @@ void	rr(t_elem *push_swap, int key);
 void	rra(t_elem *push_swap, int key);
 void	rrb(t_elem *push_swap, int key);
 void	rrr(t_elem *push_swap, int key);
+void	main_parsing(t_elem *push_swap, char **av);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:19:49 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/09 20:03:24 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/11 20:32:27 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,6 @@ void	ft_error(char *c)
 {
 	ft_printf("Error\n%s\n", c);
 	exit (1);
-}
-
-int	ft_max(int a, int b)
-{
-	if (a > b)
-		return (a);
-	else
-		return (b);
 }
 
 int	ft_atoi(char *str)
