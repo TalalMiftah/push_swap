@@ -6,11 +6,11 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:58:26 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/03/10 15:34:56 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 23:37:19 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 static int	word_count(const char *s, char c)
 {

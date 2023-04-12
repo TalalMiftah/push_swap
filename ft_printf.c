@@ -6,11 +6,11 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:34:18 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/02/20 20:34:41 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 23:36:50 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	ft_putchar(char c)
 {

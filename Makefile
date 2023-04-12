@@ -1,15 +1,15 @@
-SRC = mandatory/ft_printf.c \
-		mandatory/parsingI.c \
-		mandatory/push_swap.c \
-		mandatory/split.c \
-		mandatory/start.c \
-		mandatory/strjoin.c \
-		mandatory/operations.c \
-		mandatory/operationsII.c \
-		mandatory/lbdya.c \
-		mandatory/utils.c \
-		mandatory/from_a_to_b.c \
-		mandatory/parsingII.c
+SRC = ft_printf.c \
+		parsingI.c \
+		push_swap.c \
+		split.c \
+		start.c \
+		strjoin.c \
+		operations.c \
+		operationsII.c \
+		lbdya.c \
+		utils.c \
+		from_a_to_b.c \
+		parsingII.c
 
 OBJ = ${SRC:%.c=%.o}
 

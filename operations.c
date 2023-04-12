@@ -6,11 +6,11 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 11:43:22 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/10 21:23:54 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/12 23:36:58 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	sa(t_elem *push_swap, int key)
 {
