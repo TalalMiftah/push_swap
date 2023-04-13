@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:34:37 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 23:37:07 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 00:35:57 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,10 @@ void	push(char **str, t_elem *push_swap)
 	push_swap->b = NULL;
 	while (str[i])
 		ft_lstadd_back(&push_swap->a, lst_new(ft_atoi(str[i++])));
+	i = 0;
+	while (str[i])
+		free(str[i++]);
+	free(str);
 }
 
 void	main_parsing(t_elem *push_swap, char **av)

@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:19:49 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 23:37:11 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 00:42:27 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,24 @@ void	ft_error(char *c)
 {
 	ft_printf("Error\n%s\n", c);
 	exit (1);
+}
+
+void	ft_lstclear(t_elem *push_swap)
+{
+	t_list	*h;
+	t_list	*tmp;
+
+	tmp = push_swap->a;
+	if (!push_swap->a)
+		return ;
+	while (push_swap->a)
+	{
+		h = push_swap->a->next;
+		free(push_swap->a);
+		push_swap->a = h;
+		if (push_swap->a == tmp)
+			break ;
+	}
 }
 
 int	ft_atoi(char *str)

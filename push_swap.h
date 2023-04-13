@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:33:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 00:06:12 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 00:33:39 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ typedef struct elements
 }	t_elem;
 
 void	content_check(char **str);
+void	ft_lstclear(t_elem *push_swap);
 void	no_repeat(char **str);
 int		ft_printf(const char *s, ...);
 int		ft_putchar(char c);
