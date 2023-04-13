@@ -6,11 +6,11 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 16:07:47 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 00:34:10 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 21:35:32 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	what_to_push(t_elem *push_swap)
 {
@@ -119,4 +119,5 @@ void	find_l(t_elem *push_swap)
 		rra(push_swap, 1);
 		i++;
 	}
+	push_swap->b = NULL;
 }

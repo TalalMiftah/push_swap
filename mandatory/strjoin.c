@@ -6,13 +6,13 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:58:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 23:37:27 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 17:57:17 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	int	i;
 

@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:33:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 00:33:39 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 18:02:41 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@
 # include <stdarg.h>
 # include <limits.h>
 # include <stdio.h>
+# include <fcntl.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 typedef struct s_list
 {
@@ -46,7 +50,14 @@ typedef struct elements
 	int		best_b0;
 }	t_elem;
 
+void	main_parsing(t_elem *push_swap, char **av);
+char	*next_ryhme(char *str);
+char	*ft_rhyme(char *s);
+int		ft_strchr(char *s, char c);
 void	content_check(char **str);
+char	*ft_read(int fd, char *s);
+char	*get_next_line(int fd);
+char	*ft_strdup(char *s);
 void	ft_lstclear(t_elem *push_swap);
 void	no_repeat(char **str);
 int		ft_printf(const char *s, ...);
@@ -54,7 +65,7 @@ int		ft_putchar(char c);
 int		ft_putnbr(int n);
 int		ft_putstr(const char *s);
 char	*ft_strjoin(char *str1, char *str2);
-int		ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 char	*ft_strdup(char *s);
 char	**ft_split(char const *s, char c);
 int		ft_strcmp(char *s1, char *s2);
@@ -93,6 +104,5 @@ void	rr(t_elem *push_swap, int key);
 void	rra(t_elem *push_swap, int key);
 void	rrb(t_elem *push_swap, int key);
 void	rrr(t_elem *push_swap, int key);
-void	main_parsing(t_elem *push_swap, char **av);
 
 #endif

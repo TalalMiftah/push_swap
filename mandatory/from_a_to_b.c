@@ -6,11 +6,11 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/31 22:36:55 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/12 23:36:44 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/13 17:57:17 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	re_indexing(t_list *h)
 {
