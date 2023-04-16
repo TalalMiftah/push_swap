@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 16:34:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 18:21:09 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 22:44:48 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*ft_strdup(char *s)
 	i = ft_strlen(s) + 1;
 	s1 = malloc(i);
 	if (!s1)
-		return (NULL);
+		exit (1);
 	i = 0;
 	while (s[i])
 	{
@@ -71,35 +71,6 @@ char	*ft_strdup(char *s)
 	}
 	s1[i] = '\0';
 	return (s1);
-}
-
-char	*ft_rhyme(char *s)
-{
-	ssize_t	i;
-	char	*rhyme;
-
-	i = 0;
-	if (!s[i])
-		return (NULL);
-	while (s[i])
-	{
-		if (s[i] == '\n')
-		{
-			i++;
-			break ;
-		}
-		i++;
-	}
-	rhyme = malloc(i + 1);
-	if (!rhyme)
-		return (NULL);
-	rhyme[i--] = 0;
-	while (i >= 0)
-	{
-		rhyme[i] = s[i];
-		i--;
-	}
-	return (rhyme);
 }
 
 char	*next_ryhme(char *str)
@@ -119,7 +90,7 @@ char	*next_ryhme(char *str)
 	}
 	s = malloc (ft_strlen(str) - i + 1);
 	if (!s)
-		return (NULL);
+		exit (1);
 	i++;
 	while (str[i])
 		s[j++] = str[i++];

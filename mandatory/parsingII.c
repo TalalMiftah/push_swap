@@ -6,15 +6,15 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:19:49 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 17:57:17 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 21:41:03 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	ft_error(char *c)
+void	ft_error(void)
 {
-	ft_printf("Error\n%s\n", c);
+	write(2, "Error\n", 6);
 	exit (1);
 }
 
@@ -56,9 +56,9 @@ int	ft_atoi(char *str)
 		result *= 10;
 		result += (*str - '0');
 		if (result > 2147483648 && sign == -1)
-			ft_error("An integer is less than INT_MIN");
+			ft_error();
 		else if (result > 2147483647 && sign == 1)
-			ft_error("An integer is bigger than INT_MAX");
+			ft_error();
 		str++;
 	}
 	return (result * sign);
@@ -76,8 +76,8 @@ void	no_repeat(char **str)
 		j = 1;
 		while (str[i + j])
 		{
-			if (ft_strcmp(str[i], str[i + j]) == 0)
-				ft_error("their is an repeated number");
+			if (ft_atoi(str[i]) == ft_atoi(str[i + j]))
+				ft_error();
 			j++;
 		}
 		i++;
@@ -95,12 +95,12 @@ void	content_check(char **str)
 	{
 		re = ft_atoi(str[i]);
 		j = 0;
-		if (str[i][j] == '-' || str[i][j] == '+')
+		if ((str[i][j] == '-' || str[i][j] == '+') && str[i][j + 1])
 			j++;
 		while (str[i][j])
 		{
 			if (str[i][j] < '0' || str[i][j] > '9')
-				ft_error("Check your arguments their is a character with them");
+				ft_error();
 			j++;
 		}
 		i++;

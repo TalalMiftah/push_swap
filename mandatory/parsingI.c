@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 20:34:37 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 20:36:35 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 21:22:16 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	rrr(t_elem *push_swap, int key)
 {
-	push_swap->a = (push_swap->a)->previous;
-	push_swap->b = (push_swap->b)->previous;
+	rra(push_swap, 0);
+	rrb(push_swap, 0);
 	if (key)
 		ft_printf("rrr\n");
 }
@@ -28,7 +28,7 @@ void	av_c(char *str)
 	i = 0;
 	j = 0;
 	if (str[0] == '\0')
-		ft_error("argument issue");
+		ft_error();
 	while (str[i])
 	{
 		if (str[i] >= '0' && str[i] <= '9')
@@ -36,7 +36,7 @@ void	av_c(char *str)
 		i++;
 	}
 	if (j == 0)
-		ft_error("argument issue");
+		ft_error();
 }
 
 char	*args_join(char	**av)

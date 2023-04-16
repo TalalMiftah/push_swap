@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 11:43:22 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 21:11:30 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/14 20:39:45 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@ void	ss(t_elem *push_swap, int key)
 {
 	sb(push_swap, key);
 	sa(push_swap, key);
-	ft_printf("ss\n");
+	if (key)
+		ft_printf("ss\n");
 }
 
 void	pa(t_elem *push_swap, int key)

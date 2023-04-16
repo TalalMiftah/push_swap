@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 11:43:22 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 22:28:03 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/14 21:32:12 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,9 +50,12 @@ void	ss(t_elem *push_swap, int key)
 
 void	pa(t_elem *push_swap, int key)
 {
+	int		i;
+	int		j;
 	t_list	*swap;
 	t_list	*s;
 
+	i = ft_lstsize(push_swap->b);
 	swap = push_swap->b;
 	if (push_swap->b)
 	{
@@ -66,13 +69,19 @@ void	pa(t_elem *push_swap, int key)
 		if (key)
 			ft_printf("pa\n");
 	}
+	j = ft_lstsize(push_swap->b);
+	if (i == j)
+		push_swap->b = NULL;
 }
 
 void	pb(t_elem *push_swap, int key)
 {
+	int		i;
+	int		j;
 	t_list	*swap;
 	t_list	*s;
 
+	i = ft_lstsize(push_swap->a);
 	swap = push_swap->a;
 	if (push_swap->a)
 	{
@@ -86,4 +95,7 @@ void	pb(t_elem *push_swap, int key)
 		if (key)
 			ft_printf("pb\n");
 	}
+	j = ft_lstsize(push_swap->a);
+	if (i == j)
+		push_swap->a = NULL;
 }

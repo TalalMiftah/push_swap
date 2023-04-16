@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:58:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 17:57:17 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 22:41:24 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strdup(char *s)
 	i = ft_strlen(s) + 1;
 	s1 = malloc(i);
 	if (!s1)
-		return (NULL);
+		exit (1);
 	i = 0;
 	while (s[i])
 	{
@@ -60,6 +60,8 @@ char	*ft_strjoin(char *str1, char *str2)
 	if (!str1 || !str2)
 		exit (1);
 	c = malloc(ft_strlen(str1) + ft_strlen(str2) + 2);
+	if (!c)
+		exit (1);
 	while (str1[i])
 	{
 		c[i] = str1[i];

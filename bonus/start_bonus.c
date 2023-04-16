@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 18:13:24 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 22:48:56 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 22:27:45 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*lst_new(int n)
 	t_list	*h;
 
 	h = malloc(sizeof(t_list));
+	if (!h)
+		exit (1);
 	h->i = n;
 	h->next = h;
 	h->previous = h;
@@ -78,14 +80,17 @@ int	ft_lstsize(t_list *lst)
 	int		count;
 	t_list	*h;
 
-	h = lst;
 	count = 0;
-	while (1)
+	if (lst)
 	{
-		count++;
-		lst = lst -> next;
-		if (lst == h)
-			break ;
+		h = lst;
+		while (1)
+		{
+			count++;
+			lst = lst -> next;
+			if (lst == h)
+				break ;
+		}
 	}
 	return (count);
 }

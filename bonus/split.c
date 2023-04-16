@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:58:26 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 17:57:17 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 22:27:23 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char	*allocation_of_words(const char *s, char c)
 	i = 0;
 	word = (char *)malloc(size(s, c) * sizeof(char) + 1);
 	if (!word)
-		return (NULL);
+		exit (1);
 	while (*s && *s != c)
 		word[i++] = *s++;
 	word[i] = '\0';
@@ -81,7 +81,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	ptr = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!ptr)
-		return (NULL);
+		exit (1);
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)

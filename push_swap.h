@@ -6,7 +6,7 @@
 /*   By: tmiftah <tmiftah@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 20:33:15 by tmiftah           #+#    #+#             */
-/*   Updated: 2023/04/13 18:02:41 by tmiftah          ###   ########.fr       */
+/*   Updated: 2023/04/16 21:40:46 by tmiftah          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ size_t	ft_strlen(char *str);
 char	*ft_strdup(char *s);
 char	**ft_split(char const *s, char c);
 int		ft_strcmp(char *s1, char *s2);
-void	ft_error(char *c);
+void	ft_error(void);
 int		ft_atoi(char *str);
 void	push(char **str, t_elem *push_swap);
 void	av_c(char *str);
